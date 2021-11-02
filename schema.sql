@@ -48,3 +48,6 @@ CREATE TABLE visits(
 
 -- This was added to improve on the performance of the SELECT * FROM visits where vet_id = 2; query.
 CREATE INDEX visits_vet_id_asc ON visits(vet_id ASC);
+
+-- Adding a non-clustered index to the owner's table
+CREATE INDEX owners_email_asc ON owners(email);
