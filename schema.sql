@@ -45,3 +45,6 @@ CREATE TABLE visits(
   date_of_visit DATE,
   PRIMARY KEY(id)
 );
+
+-- This was added to improve on the performance of the SELECT * FROM visits where vet_id = 2; query.
+CREATE INDEX visits_vet_id_asc ON visits(vet_id ASC);
